@@ -10,8 +10,7 @@ import Languagec from "./ln";
 
 import { useTranslation } from "react-i18next";
 import Home from "../../page/Home";
-
-
+import { GiScarecrow } from "react-icons/gi";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t, i18n } = useTranslation();
@@ -22,7 +21,8 @@ const Navbar = () => {
         <div className="hidden md:flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="text-black font-bold text-xl">
-              Logo
+              {/* Logo */}
+              <GiScarecrow size={44}/>
             </Link>
           </div>
           <div className="ml-auto flex items-center space-x-4">

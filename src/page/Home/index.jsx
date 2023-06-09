@@ -16,7 +16,7 @@ const Home = ({ style, ...props }) => {
   );
 
   return (
-    <div className="bg-red-900   m-20">
+    <div className="m-20">
       <ReactCompareSlider
         {...props}
         itemOne={
@@ -36,6 +36,11 @@ const Home = ({ style, ...props }) => {
           ...style,
         }}
       />
+      <div>
+        <p>
+{t("para")}
+        </p>
+      </div>
     </div>
   );
 };
