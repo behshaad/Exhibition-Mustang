@@ -2,12 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {  AiOutlineMenu } from "react-icons/ai";
 import { FaHamburger } from "react-icons/fa";
+import { BiWorld } from "react-icons/bi";
 
 import { useState } from "react";
+import Languagec from "./ln";
+
+
+import { useTranslation } from "react-i18next";
+import Home from "../../page/Home";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { t, i18n } = useTranslation();
   return (
     <nav className="bg-gray-200">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -19,23 +26,25 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="ml-auto flex items-center space-x-4">
+            <BiWorld />
+            <Languagec />
             <Link
               to="/"
               className="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
             >
-              Home
+              {t("Home")}
             </Link>
             <Link
               to="/about"
               className="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
             >
-              About
+              {t("About")}
             </Link>
             <Link
               to="/contact"
               className="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
             >
-              Contact
+              {t("Contact")}
             </Link>
           </div>
         </div>
@@ -58,7 +67,10 @@ const Navbar = () => {
                 {isOpen ? "Close menu" : "Open menu"}
               </span>
               {isOpen ? (
-                <FaHamburger className="bg-red-900 block h-6 w-6" aria-hidden="true" />
+                <FaHamburger
+                  className="bg-red-900 block h-6 w-6"
+                  aria-hidden="true"
+                />
               ) : (
                 <AiOutlineMenu className="block h-6 w-6" aria-hidden="true" />
               )}

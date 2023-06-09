@@ -1,5 +1,7 @@
 const en = {
-  Home: "hello welcome home",
+  Home: "home",
+  About:"About",
+  Contact:"Contact",
 
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 

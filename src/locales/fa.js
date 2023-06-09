@@ -1,5 +1,7 @@
 const fa = {
-  Home: "sallam be khone khoshomdi",
+  Home: "خانه",
+  About:'درباره ما',
+  Contact:"ارتباط با ما",
   text: "faaafafafafafa",
   text2: "fasaaaafafaf",
   total: "number {{value}} is",
