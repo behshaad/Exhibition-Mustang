@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { MenuIcon } from "../../../node_modules/@heroicons/react/outline";
+import {  AiOutlineMenu } from "react-icons/ai";
+import { FaHamburger } from "react-icons/fa";
+
 import { useState } from "react";
 
 const Navbar = () => {
@@ -38,7 +40,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* //??? code for mobile view of */}
-        // code for mobile view of navbar
+
         <div className="md:hidden flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="#" className="text-black font-bold text-xl">
@@ -50,16 +52,16 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+              className="bg-gray-200 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
             >
-              {/* <span className="sr-only">
+              <span className="sr-only">
                 {isOpen ? "Close menu" : "Open menu"}
-              </span> */}
-              {/* {isOpen ? (
-                <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+              </span>
+              {isOpen ? (
+                <FaHamburger className="bg-red-900 block h-6 w-6" aria-hidden="true" />
               ) : (
-                <MenuIcon className="block h-6 w-6" aria-hidden="true" />
-              )} */}
+                <AiOutlineMenu className="block h-6 w-6" aria-hidden="true" />
+              )}
             </button>
           </div>
 
