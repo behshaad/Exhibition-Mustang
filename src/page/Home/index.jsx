@@ -1,18 +1,45 @@
-import React, { useState } from "react";
+import React, { useCallback } from "react";
 import { useTranslation } from "react-i18next";
+import {
+  ReactCompareSlider,
+  ReactCompareSliderHandle,
+  ReactCompareSliderImage,
+} from "react-compare-slider";
 
-import { BiWorld } from "react-icons/bi";
+import b from "../../static/mostangjpg.jpeg"
 
-const Home = () => {
-  const { t, i18n } = useTranslation();
+const Home = ({ style, ...props }) => {
+    const { t, i18n } = useTranslation();
+  const handlePositionChange = useCallback(
+    (position) => console.log("[CustomHandle]", position),
+    []
+  );
 
   return (
-    <main className="bg-slate-300 container mx-auto mt-20 flex flex-col items-center  gap-2 ">
-      <h1>Multi-language app</h1>
-      <BiWorld size={44} />
-
-      <h1>{t("Home")}</h1>
-    </main>
+    <div className="bg-red-900   m-20">
+      <ReactCompareSlider
+        {...props}
+        itemOne={
+          <ReactCompareSliderImage
+            src={b}
+            style={{ filter: "grayscale(1)" }}
+            alt="one"
+          />
+        }
+        itemTwo={<ReactCompareSliderImage src={b} alt="two" />}
+        onPositionChange={handlePositionChange}
+        portrait
+        style={{
+          display: "flex",
+          width: "100%",
+          height: "50vh",
+          ...style,
+        }}
+      />
+    </div>
   );
 };
+
 export default Home;
+
+
