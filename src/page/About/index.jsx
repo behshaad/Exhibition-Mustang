@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 const About = () => {
+  const { t, i18n } = useTranslation();
   return (
-    <>
-      <h1>about</h1>
-    </>
+    <div className="bg-slate-300 container mx-auto mt-20 flex flex-col items-center  gap-2" >
+      <h1>{t("About")}</h1>
+    </div>
   );
 };
 
