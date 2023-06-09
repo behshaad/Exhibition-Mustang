@@ -1,13 +1,17 @@
 import { useRoutes } from "react-router";
 import routes from "./routes";
-import Home from "./page/Home";
+import Navbar from "./components/navbar";
+
+
 function App() {
-  // let router = useRoutes(routes);
+  let router = useRoutes(routes);
 
   return (
     <>
-      <Home />
-      {/* {router} */}
+
+        <Navbar/>
+        {router}
+  
     </>
   );
 }
