@@ -6,10 +6,10 @@ function App() {
   let router = useRoutes(routes);
 
   return (
-    <>
+    <div className="h-screen overflow-hidden">
       <Navbar />
       {router}
-    </>
+    </div>
   );
 }
 
