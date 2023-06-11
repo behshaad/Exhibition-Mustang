@@ -8,11 +8,25 @@ function App() {
   return (
     <>
       <Navbar />
-
       {router}
     </>
   );
 }
 
 export default App;
+// !??????????????????????????????????????????/
+// *main app scroll center
+// import React from 'react';
+// import ScrollToCenter from './components/ScrollToCenter';
 
+// const App = () => {
+//   return (
+//     <ScrollToCenter/>
+//   );
+// };
+
+// export default App;
+
+// *main app scroll center
+
+// *main app scroll center
