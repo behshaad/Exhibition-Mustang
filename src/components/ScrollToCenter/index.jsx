@@ -9,7 +9,7 @@ import Summer from "./Summer";
 import Spring from "./Spring";
 
 const Slider = () => (
-  <div className="bg-red-900 h-screen overflow-hidden">
+  <div className="h-screen overflow-hidden">
     <Carousel>
       <Winter />
       <Autumn />

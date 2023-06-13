@@ -7,6 +7,7 @@ import {
 } from "react-compare-slider";
 
 import b from "../../static/mostangjpg.jpeg"
+import Slider from "../../components/ScrollToCenter";
 
 const Home = ({ style, ...props }) => {
     const { t, i18n } = useTranslation();
@@ -37,9 +38,7 @@ const Home = ({ style, ...props }) => {
         }}
       />
       <div>
-        <p>
-{t("para")}
-        </p>
+        <p>{t("para")}</p>
       </div>
     </div>
   );

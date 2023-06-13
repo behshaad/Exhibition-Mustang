@@ -1,4 +1,3 @@
-// https://github.com/VitaliiZhukov/react-scroll-slider/blob/master/stories/Basic/Basic/Components/Winter/index.js
 import React from "react";
 import styled from "styled-components";
 

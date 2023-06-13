@@ -22,7 +22,7 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="text-black font-bold text-xl">
               {/* Logo */}
-              <GiScarecrow size={44}/>
+              <GiScarecrow size={44} />
             </Link>
           </div>
           <div className="ml-auto flex items-center space-x-4">
@@ -35,10 +35,22 @@ const Navbar = () => {
               {t("Contact")}
             </Link>
             <Link
+              to="/contact"
+              className="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              {t("happyman")}
+            </Link>
+            <Link
               to="/about"
               className="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
             >
               {t("About")}
+            </Link>
+            <Link
+              to="/Nested"
+              className="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              {t("Nested")}
             </Link>
             <Link
               to="/"

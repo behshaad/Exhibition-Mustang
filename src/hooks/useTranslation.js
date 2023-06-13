@@ -1,27 +1,3 @@
-// import { useState, useEffect } from "react";
-// import i18n from "i18next";
-
-// const useTranslation = () => {
-//   const [language, setLanguage] = useState(
-//     () => localStorage.getItem("language") || "en"
-//   );
-
-//   useEffect(() => {
-//     i18n.changeLanguage(language);
-//     localStorage.setItem("language", language);
-//   }, [language]);
-
-//   const changeLanguage = (newLanguage) => {
-//     setLanguage(newLanguage);
-//   };
-
-//   return {
-//     language,
-//     changeLanguage,
-//   };
-// };
-
-// export default useTranslation;
 import { useState, useEffect } from "react";
 import i18n from "i18next";
 
