@@ -6,11 +6,11 @@ import {
   ReactCompareSliderImage,
 } from "react-compare-slider";
 
-import b from "../../static/mostangjpg.jpeg"
+import b from "../../static/mostangjpg.jpeg";
 import Slider from "../../components/ScrollToCenter";
-
+import "./style.css";
 const Home = ({ style, ...props }) => {
-    const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const handlePositionChange = useCallback(
     (position) => console.log("[CustomHandle]", position),
     []
@@ -40,10 +40,25 @@ const Home = ({ style, ...props }) => {
       <div>
         <p>{t("para")}</p>
       </div>
+      {/*  */}
+      <button>
+        <div>
+          <span>
+            <p>Hover Me</p>
+            <p>:)</p>
+          </span>
+        </div>
+        <div>
+          <span>
+            <p>Thanks</p>
+            <p>:D</p>
+          </span>
+        </div>
+      </button>
+      {/*  */}
+ 
     </div>
   );
 };
 
 export default Home;
-
-
