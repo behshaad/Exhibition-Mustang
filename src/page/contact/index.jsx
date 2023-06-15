@@ -23,6 +23,7 @@ import {
 
 import a from "../../static/40718.jpg"
 import b from "../../static/mostangjpg.jpeg"
+import Slide from "../../components/navbar/ SlideableMenuSwiper";
 /** With Customised `handle`. */
 const Contact = ({ style, ...props }) => {
   const handlePositionChange = useCallback(
@@ -31,38 +32,38 @@ const Contact = ({ style, ...props }) => {
   );
 
   return (
-    <ReactCompareSlider
-      {...props}
-      handle={
-        <ReactCompareSliderHandle
-          buttonStyle={{
-            backdropFilter: undefined,
-            border: 0,
-            color: "#333",
-          }}
-        />
-      }
-      itemOne={
-        <ReactCompareSliderImage
-          src={a}
-          style={{ filter: "grayscale(1)" }}
-          alt="one"
-        />
-      }
-      itemTwo={
-        <ReactCompareSliderImage
-          src={a}
-          alt="two"
-        />
-      }
-      onPositionChange={handlePositionChange}
-      style={{
-        display: "flex",
-        width: "100%",
-        height: "50vh",
-        ...style,
-      }}
-    />
+    <div>
+      <ReactCompareSlider
+        className=""
+        {...props}
+        handle={
+          <ReactCompareSliderHandle
+            buttonStyle={{
+              backdropFilter: undefined,
+              border: 0,
+              color: "#333",
+            }}
+          />
+        }
+        itemOne={
+          <ReactCompareSliderImage
+            src={a}
+            style={{ filter: "grayscale(1)" }}
+            alt="one"
+          />
+        }
+        itemTwo={<ReactCompareSliderImage src={a} alt="two" />}
+        onPositionChange={handlePositionChange}
+        style={{
+          display: "flex",
+          width: "100%",
+          height: "50vh",
+          ...style,
+        }}
+      />
+      <h1>slide</h1>
+      <Slide/>
+    </div>
   );
 };
 

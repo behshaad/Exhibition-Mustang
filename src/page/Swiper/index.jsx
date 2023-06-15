@@ -22,6 +22,7 @@ function Nested() {
         modules={[Pagination]}
         pagination={{
           clickable: true,
+
         }}
         navigation={true}
       >
@@ -36,9 +37,9 @@ function Nested() {
             spaceBetween={100}
             modules={[Pagination]}
             pagination={{
-              clickable: true,
+              clickable: false,
             }}
-            Navigation={true}
+            // Navigation={true}
           >
             <SwiperSlide>
               <Contact />

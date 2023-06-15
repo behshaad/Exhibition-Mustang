@@ -56,7 +56,7 @@ const Home = ({ style, ...props }) => {
         </div>
       </button>
       {/*  */}
- 
+
     </div>
   );
 };
