@@ -6,17 +6,29 @@ import { BiWorld } from "react-icons/bi";
 
 import { useState } from "react";
 import Languagec from "./ln";
-  
-import "./nav.css"
+
+import "./nav.css";
+import DarkModeToggle from "react-dark-mode-toggle";
+import  { useContext } from "react";
+import { DarkThemeContext } from "../DarkThemeContext";
 
 import { useTranslation } from "react-i18next";
 import Home from "../../page/Home";
 import { GiScarecrow } from "react-icons/gi";
 const Navbar = () => {
+    const { turnOn, setTurnOn, mainColor } = useContext(DarkThemeContext);
+
   const [isOpen, setIsOpen] = useState(false);
   const { t, i18n } = useTranslation();
   return (
-    <nav className="bg-gray-200">
+    <nav
+      className="bg-gray-200"
+      style={{
+        backgroundColor: mainColor.bg,
+        color: mainColor.txt,
+        height: "100vh",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         {/* //?? code for desktop view of navbar  */}
         <div className="hidden md:flex items-center justify-between h-16">
@@ -24,6 +36,7 @@ const Navbar = () => {
             <Link to="/" className="text-black font-bold text-xl">
               {/* Logo */}
               <GiScarecrow size={44} />
+              <DarkModeToggle onChange={setTurnOn} checked={turnOn} size={30} />
             </Link>
           </div>
           <div className="ml-auto flex items-center space-x-4">
