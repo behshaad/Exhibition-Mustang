@@ -8,8 +8,8 @@ function App() {
 
   return (
     <div className="h-screen overflow-hidden">
-      {/* <Navbar /> */}
-      <MySidebar />
+      <Navbar />
+      {/* <MySidebar /> */}
       {router}
     </div>
   );
